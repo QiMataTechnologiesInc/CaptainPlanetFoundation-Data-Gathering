@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:partial="clr-namespace:QiMata.CaptainPlanetFoundation.Views.Partial;assembly=QiMata.CaptainPlanetFoundation"
+             xmlns:forms="clr-namespace:QiMata.CaptainPlanetFoundation.ViewModels.Forms;assembly=QiMata.CaptainPlanetFoundation"
+             x:Class="QiMata.CaptainPlanetFoundation.Views.Forms.AddHabitatRestorationPage"
+             Title="New Habitat Restoration">
+  <ContentPage.BindingContext>
+    <forms:AddHabitatRestorationViewModel></forms:AddHabitatRestorationViewModel>
+  </ContentPage.BindingContext>
+  <StackLayout VerticalOptions="FillAndExpand" Padding="10,10,10,10">
+    <partial:FormErrorsPartial VerticalOptions="Start"></partial:FormErrorsPartial>
+        <partial:ProjectBasePartial BindingContext="{Binding ProjectBasePartial}" VerticalOptions="FillAndExpand"></partial:ProjectBasePartial>
+    <StackLayout Orientation="Horizontal" VerticalOptions="Start">
+            <Entry HorizontalOptions="FillAndExpand" Placeholder="Size Of Restoration" Text="{Binding SizeOfRestoration,Mode=TwoWay}"></Entry>
+            <Picker HorizontalOptions="FillAndExpand" Title="Units" SelectedIndex="{Binding UnitsSelectedIndex,Mode=TwoWay}">
+        <Picker.Items>
+          <x:String>Square Feet</x:String>
+          <x:String>Acres</x:String>
+        </Picker.Items>
+      </Picker>
+    </StackLayout>
+        <Picker Title="Restored or Added" HorizontalOptions="FillAndExpand" SelectedIndex="{Binding RestoredOrAddedIndex,Mode=TwoWay}">
+      <Picker.Items>
+        <x:String>Restored</x:String>
+        <x:String>Added</x:String>
+      </Picker.Items>
+    </Picker>
+        <Picker Title="Type of Restoration" HorizontalOptions="FillAndExpand" SelectedIndex="{Binding TypeOfRestorationIndex,Mode=TwoWay}">
+        <Picker.Items>
+            <x:String>Water Source</x:String>
+            <x:String>Shelter</x:String>
+            <x:String>Food</x:String>
+            <x:String>Removal of Invasive Species</x:String>
+        </Picker.Items>
+    </Picker>
+        <Entry HorizontalOptions="FillAndExpand" Placeholder="Total Area Restored (Acres)" Text="{Binding TotalAreaRestored,Mode=TwoWay}"></Entry>
+    <Button HorizontalOptions="FillAndExpand" Text="Submit" Command="{Binding SubmitCommand}" TextColor="Black" BackgroundColor="#6DB4A6"></Button>
+  </StackLayout>
+</ContentPage>

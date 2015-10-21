@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="QiMata.CaptainPlanetFoundation.Views.MainPage"
+              xmlns:appViews="clr-namespace:QiMata.CaptainPlanetFoundation.Views;assembly=QiMata.CaptainPlanetFoundation"
+              xmlns:viewModels="clr-namespace:QiMata.CaptainPlanetFoundation.ViewModels;assembly=QiMata.CaptainPlanetFoundation"
+                >
+    <MasterDetailPage.BindingContext>
+        <viewModels:MainPageViewModel></viewModels:MainPageViewModel>
+    </MasterDetailPage.BindingContext>
+    <MasterDetailPage.Master>
+        <appViews:MainPageMaster></appViews:MainPageMaster>
+    </MasterDetailPage.Master>
+    <MasterDetailPage.Detail>
+        <appViews:DetailPage></appViews:DetailPage>
+    </MasterDetailPage.Detail>
+</MasterDetailPage>

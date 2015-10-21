@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:customRenderers="clr-namespace:QiMata.CaptainPlanetFoundation.CustomRenderers;assembly=QiMata.CaptainPlanetFoundation"
+             x:Class="QiMata.CaptainPlanetFoundation.Views.Partial.ProjectBasePartial">
+  <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+    <Entry Text="{Binding ProjectName,Mode=TwoWay}" HorizontalOptions="FillAndExpand" Placeholder="Project Name" />
+    <Entry Text="{Binding NumberOfParticipants,Mode=TwoWay}" HorizontalOptions="FillAndExpand" Placeholder="Number Of Participants" />
+    <Entry Text="{Binding ClassName,Mode=TwoWay}" HorizontalOptions="FillAndExpand" Placeholder="Class Name" />
+    <Entry Text="{Binding DataReportedLocation,Mode=TwoWay}" HorizontalOptions="FillAndExpand" Placeholder="Data Reported Location" />
+    <Entry Text="{Binding Description,Mode=TwoWay}" VerticalOptions="FillAndExpand"  HorizontalOptions="FillAndExpand" Placeholder="Description"  />
+    <customRenderers:ImageInput  Source="picture_icon.png" VerticalOptions="FillAndExpand" Image="{Binding ImageSource,Mode=TwoWay}"  ></customRenderers:ImageInput>
+  </StackLayout>
+</ContentView>

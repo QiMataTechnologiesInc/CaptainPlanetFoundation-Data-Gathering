@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:forms="clr-namespace:QiMata.CaptainPlanetFoundation.ViewModels.Forms;assembly=QiMata.CaptainPlanetFoundation"
+             xmlns:partial="clr-namespace:QiMata.CaptainPlanetFoundation.Views.Partial;assembly=QiMata.CaptainPlanetFoundation"
+             x:Class="QiMata.CaptainPlanetFoundation.Views.Forms.AddEditableGardenPage">
+  <ContentPage.BindingContext>
+    <forms:AddEditableGardenViewModel></forms:AddEditableGardenViewModel>
+  </ContentPage.BindingContext>
+  <StackLayout VerticalOptions="FillAndExpand" Padding="10,10,10,10">
+    <partial:FormErrorsPartial VerticalOptions="Start"></partial:FormErrorsPartial>
+    <partial:ProjectBasePartial BindingContext="{Binding ProjectBasePartial}" VerticalOptions="FillAndExpand"></partial:ProjectBasePartial>
+    <Entry Text="{Binding SizeOfGarden}" HorizontalOptions="FillAndExpand" Placeholder="Size of garden" ></Entry>
+    <Entry Text="{Binding UseOfHarvest}" HorizontalOptions="FillAndExpand" Placeholder="Use of harvest" ></Entry>
+    <Button HorizontalOptions="FillAndExpand" Text="Submit" Command="{Binding SubmitCommand}" TextColor="Black" BackgroundColor="#6DB4A6"></Button>
+  </StackLayout>
+</ContentPage>
