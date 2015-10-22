@@ -79,7 +79,10 @@ namespace QiMata.CaptainPlanetFoundation.WebApiApp.Api
             {
                 return BadRequest(ModelState);
             }
-
+            if (habitatRestoration.ProjectBase != null)
+            {
+                habitatRestoration.ProjectBase.DateReported = DateTime.Now;
+            }
             db.HabitatRestorations.Add(habitatRestoration);
 
             try

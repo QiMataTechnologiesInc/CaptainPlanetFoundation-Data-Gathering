@@ -78,9 +78,16 @@
     <Compile Include="ViewModels\PreviousActivityViewModel.cs" />
     <Compile Include="ViewModels\ReforestationViewModel.cs" />
     <Compile Include="ViewModels\RenewableEnergyViewModel.cs" />
+    <Compile Include="ViewModels\ViewItemModels\AquaponicsListItemViewModel.cs" />
+    <Compile Include="ViewModels\ViewItemModels\EdibleGardenItemViewModel.cs" />
     <Compile Include="ViewModels\ViewItemModels\HabitatRestorationViewItem.cs" />
     <Compile Include="ViewModels\ViewItemModels\NavigationListItemViewModel.cs" />
+    <Compile Include="ViewModels\ViewItemModels\PollinatorGardenListItemViewModel.cs" />
     <Compile Include="ViewModels\ViewItemModels\PreviousActivityItemViewModel.cs" />
+    <Compile Include="ViewModels\ViewItemModels\ReforestationItemViewModel.cs" />
+    <Compile Include="ViewModels\ViewItemModels\RenewableEnergyItemViewModel.cs" />
+    <Compile Include="ViewModels\ViewItemModels\WasteDiversionItemViewModel.cs" />
+    <Compile Include="ViewModels\ViewItemModels\WaterQualityMonitoringItemViewModel.cs" />
     <Compile Include="ViewModels\WasteDiversionViewModel.cs" />
     <Compile Include="ViewModels\WaterQualityMonitoringViewModel.cs" />
     <Compile Include="Views\AquaponicsPage.xaml.cs">

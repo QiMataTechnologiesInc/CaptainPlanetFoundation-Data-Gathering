@@ -79,6 +79,10 @@ namespace QiMata.CaptainPlanetFoundation.WebApiApp.Api
             {
                 return BadRequest(ModelState);
             }
+            if (renewableEnergy.ProjectBase != null)
+            {
+                renewableEnergy.ProjectBase.DateReported = DateTime.Now;
+            }
 
             db.RenewableEnergies.Add(renewableEnergy);
 

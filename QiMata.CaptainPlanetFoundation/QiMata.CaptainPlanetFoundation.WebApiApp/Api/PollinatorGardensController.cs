@@ -79,7 +79,10 @@ namespace QiMata.CaptainPlanetFoundation.WebApiApp.Api
             {
                 return BadRequest(ModelState);
             }
-
+            if (pollinatorGarden.ProjectBase != null)
+            {
+                pollinatorGarden.ProjectBase.DateReported = DateTime.Now;
+            }
             db.PollinatorGardens.Add(pollinatorGarden);
 
             try

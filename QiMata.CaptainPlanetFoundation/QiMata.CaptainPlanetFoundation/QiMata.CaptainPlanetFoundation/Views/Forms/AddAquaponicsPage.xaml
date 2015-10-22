@@ -14,7 +14,7 @@
     <Picker Title="Aquaponics Project Type" HorizontalOptions="FillAndExpand" SelectedIndex="{Binding TypeSelectedIndex}">
       <Picker.Items>
         <x:String>Fish</x:String>
-        <x:String>Other</x:String>
+        <x:String>Plants</x:String>
       </Picker.Items>
     </Picker>
     <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
@@ -23,10 +23,12 @@
     </StackLayout>
     <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" IsVisible="{Binding Harvested}">
       <Entry Text="{Binding SizeOfProject}" Placeholder="Size of harvest"></Entry>
-      <Picker HorizontalOptions="FillAndExpand" SelectedIndex="{Binding UseOfHarestIndex}">
+      <Picker HorizontalOptions="FillAndExpand" SelectedIndex="{Binding UseOfHarestIndex}" Title="Use of harvest">
         <Picker.Items>
-          <x:String>Classroom</x:String>
-          <x:String>Farmers blah</x:String>
+          <x:String>Classroom tastings</x:String>
+          <x:String>Cafeteria</x:String>
+          <x:String>Food Pantries or Food Bank</x:String>
+          <x:String>School staff and families</x:String>
         </Picker.Items>
       </Picker>
     </StackLayout>

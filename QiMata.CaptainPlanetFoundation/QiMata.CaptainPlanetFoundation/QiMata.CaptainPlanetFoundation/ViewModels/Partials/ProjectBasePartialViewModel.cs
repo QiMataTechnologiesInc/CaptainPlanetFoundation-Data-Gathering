@@ -63,6 +63,10 @@ namespace QiMata.CaptainPlanetFoundation.ViewModels.Partials
                 {
                     FormErrors.Add("Number of Participants must be a valid whole number");
                 }
+                else
+                {
+                    _projectBase.NumberOfParticipants = numberOfParticipants;
+                }
             }
             if (String.IsNullOrWhiteSpace(ClassName) || String.IsNullOrWhiteSpace(ClassName))
             {

@@ -12,7 +12,7 @@
     <partial:FormErrorsPartial VerticalOptions="Start"></partial:FormErrorsPartial>
     <partial:ProjectBasePartial BindingContext="{Binding ProjectBasePartial}" VerticalOptions="FillAndExpand"></partial:ProjectBasePartial>
     <Entry HorizontalOptions="FillAndExpand" Text="{Binding GardenSize}" Placeholder="Garden Size (Sq Ft)"></Entry>
-    <Entry HorizontalOptions="FillAndExpand" Text="{Binding GardentLocation}" Placeholder="Garden Location"></Entry>
+    <Entry HorizontalOptions="FillAndExpand" Text="{Binding GardenLocation}" Placeholder="Garden Location"></Entry>
     <Button HorizontalOptions="FillAndExpand" Text="Submit" Command="{Binding SubmitCommand}" TextColor="Black" BackgroundColor="#6DB4A6"></Button>
   </StackLayout>
 </ContentPage>

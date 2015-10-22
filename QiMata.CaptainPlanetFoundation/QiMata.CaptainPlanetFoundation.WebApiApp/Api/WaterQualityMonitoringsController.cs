@@ -80,6 +80,10 @@ namespace QiMata.CaptainPlanetFoundation.WebApiApp.Api
                 return BadRequest(ModelState);
             }
 
+            if (waterQualityMonitoring.ProjectBase != null)
+            {
+                waterQualityMonitoring.ProjectBase.DateReported = DateTime.Now;
+            }
             db.WaterQualityMonitorings.Add(waterQualityMonitoring);
 
             try

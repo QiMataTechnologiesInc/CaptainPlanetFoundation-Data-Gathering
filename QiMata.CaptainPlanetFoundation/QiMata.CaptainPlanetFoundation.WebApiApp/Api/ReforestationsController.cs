@@ -80,6 +80,10 @@ namespace QiMata.CaptainPlanetFoundation.WebApiApp.Api
                 return BadRequest(ModelState);
             }
 
+            if (reforestation.ProjectBase != null)
+            {
+                reforestation.ProjectBase.DateReported = DateTime.Now;
+            }
             db.Reforestations.Add(reforestation);
 
             try

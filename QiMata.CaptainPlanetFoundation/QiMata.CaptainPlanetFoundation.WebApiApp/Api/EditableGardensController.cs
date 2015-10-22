@@ -79,7 +79,10 @@ namespace QiMata.CaptainPlanetFoundation.WebApiApp.Api
             {
                 return BadRequest(ModelState);
             }
-
+            if (editableGarden.ProjectBase != null)
+            {
+                editableGarden.ProjectBase.DateReported = DateTime.Now;
+            }
             db.EditableGardens.Add(editableGarden);
 
             try

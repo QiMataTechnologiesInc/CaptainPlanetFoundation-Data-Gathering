@@ -79,7 +79,10 @@ namespace QiMata.CaptainPlanetFoundation.WebApiApp.Api
             {
                 return BadRequest(ModelState);
             }
-
+            if (aquaponicProject.ProjectBase != null)
+            {
+                aquaponicProject.ProjectBase.DateReported = DateTime.Now;
+            }
             db.AquaponicProjects.Add(aquaponicProject);
 
             try

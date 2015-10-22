@@ -9,6 +9,34 @@
     <viewModels:WasteDiversionViewModel></viewModels:WasteDiversionViewModel>
   </ContentPage.BindingContext>
   <StackLayout Padding="10,10,10,10">
-    <partial:AddNewEntryPartial BindingContext="{Binding AddNewEntry}" VerticalOptions="End" HorizontalOptions="FillAndExpand"></partial:AddNewEntryPartial>
+        <ScrollView VerticalOptions="FillAndExpand">
+            <ListView SeparatorVisibility="None" ItemsSource="{Binding WasteDiversionItemViewModels}" RowHeight="100" >
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout VerticalOptions="FillAndExpand">
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="{Binding ProjectText}" FontAttributes="Bold"></Label>
+                                    <Label Text="{Binding ProjectType}" HorizontalOptions="EndAndExpand"></Label>
+                                </StackLayout>
+                                <StackLayout Orientation="Horizontal" Padding="0,0,0,5">
+                                    <Image Source="{Binding Image}" IsVisible="{Binding HasImage}" HeightRequest="70" Aspect="AspectFit" HorizontalOptions="Start" VerticalOptions="Start"></Image>
+                                    <ContentView Padding="5,0,0,0">
+                                        <StackLayout>
+                                            <Label Text="{Binding Description}"></Label>
+                                            <Label Text="{Binding Students}"></Label>
+                                        </StackLayout>
+                                    </ContentView>
+                                    <ContentView HorizontalOptions="EndAndExpand" Padding="0,0,5,0">
+                                        <Label Text="{Binding ProjectDate}" ></Label>
+                                    </ContentView>
+                                </StackLayout>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </ScrollView>
+        <partial:AddNewEntryPartial BindingContext="{Binding AddNewEntry}" VerticalOptions="End" HorizontalOptions="FillAndExpand"></partial:AddNewEntryPartial>
   </StackLayout>
 </ContentPage>

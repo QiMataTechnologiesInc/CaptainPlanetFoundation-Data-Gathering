@@ -14,6 +14,9 @@
                 <DataTemplate>
                     <ViewCell>
                         <StackLayout VerticalOptions="FillAndExpand">
+                            <StackLayout.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding OnTap}"></TapGestureRecognizer>
+                            </StackLayout.GestureRecognizers>
                             <StackLayout Orientation="Horizontal">
                                 <Label Text="{Binding ProjectText}" FontAttributes="Bold"></Label>
                                 <Label Text="{Binding ProjectType}" HorizontalOptions="EndAndExpand"></Label>

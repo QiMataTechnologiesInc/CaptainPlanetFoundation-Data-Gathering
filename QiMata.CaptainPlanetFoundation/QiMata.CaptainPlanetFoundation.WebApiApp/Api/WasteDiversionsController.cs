@@ -80,7 +80,12 @@ namespace QiMata.CaptainPlanetFoundation.WebApiApp.Api
                 return BadRequest(ModelState);
             }
 
+            if (wasteDiversion.ProjectBase != null)
+            {
+                wasteDiversion.ProjectBase.DateReported = DateTime.Now;
+            }
             db.WasteDiversions.Add(wasteDiversion);
+            
 
             try
             {

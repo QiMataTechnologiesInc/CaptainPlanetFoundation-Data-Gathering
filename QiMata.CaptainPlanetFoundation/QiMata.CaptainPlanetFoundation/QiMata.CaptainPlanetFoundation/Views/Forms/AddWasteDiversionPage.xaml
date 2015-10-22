@@ -15,8 +15,8 @@
       <Entry Text="{Binding AmountDiverted}" HorizontalOptions="FillAndExpand" Placeholder="Amount Diverted"></Entry>
       <Picker HorizontalOptions="FillAndExpand" SelectedIndex="{Binding UnitsSelectedIndex}" Title="Units">
         <Picker.Items>
+          <x:String>Percent</x:String>
           <x:String>Pounds</x:String>
-          <x:String>Ounces</x:String>
         </Picker.Items>
       </Picker>
     </StackLayout>

@@ -89,6 +89,7 @@ namespace QiMata.CaptainPlanetFoundation.WebApiApp.Api
                 return BadRequest(ModelState);
             }
 
+            projectBase.DateReported = DateTime.Now;
             db.ProjectBases.Add(projectBase);
 
             try

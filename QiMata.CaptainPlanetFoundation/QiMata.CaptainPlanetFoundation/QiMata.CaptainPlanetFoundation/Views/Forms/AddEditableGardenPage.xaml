@@ -10,8 +10,15 @@
   <StackLayout VerticalOptions="FillAndExpand" Padding="10,10,10,10">
     <partial:FormErrorsPartial VerticalOptions="Start"></partial:FormErrorsPartial>
     <partial:ProjectBasePartial BindingContext="{Binding ProjectBasePartial}" VerticalOptions="FillAndExpand"></partial:ProjectBasePartial>
-    <Entry Text="{Binding SizeOfGarden}" HorizontalOptions="FillAndExpand" Placeholder="Size of garden" ></Entry>
-    <Entry Text="{Binding UseOfHarvest}" HorizontalOptions="FillAndExpand" Placeholder="Use of harvest" ></Entry>
+    <Entry Text="{Binding SizeOfGarden}" HorizontalOptions="FillAndExpand" Placeholder="Size of garden (sq ft)" ></Entry>
+    <Picker Title="Use of garden" HorizontalOptions="FillAndExpand" SelectedIndex="{Binding UseOfHarvestIndex}">
+        <Picker.Items>
+            <x:String>Classroom tastings</x:String>
+            <x:String>Cafeteria</x:String>
+            <x:String>Food Pantries or Food Bank</x:String>
+            <x:String>School staff and families</x:String>
+        </Picker.Items>
+    </Picker>
     <Button HorizontalOptions="FillAndExpand" Text="Submit" Command="{Binding SubmitCommand}" TextColor="Black" BackgroundColor="#6DB4A6"></Button>
   </StackLayout>
 </ContentPage>
